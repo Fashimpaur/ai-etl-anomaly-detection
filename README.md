@@ -1,8 +1,9 @@
 # AI-Driven ETL Anomaly Detection
 
-[![Python](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.14-blue)](https://www.python.org/downloads/latest/python3/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.99-green)](https://fastapi.tiangolo.com/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3-orange)](https://scikit-learn.org/)
+
 
 ## Project Overview
 This project demonstrates an **AI-powered ETL pipeline** that automatically detects anomalies and data quality issues in structured datasets. It integrates **data ingestion, preprocessing, machine learning-based anomaly detection, and a FastAPI deployment** to provide actionable insights.
