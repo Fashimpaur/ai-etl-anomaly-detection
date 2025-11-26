@@ -70,12 +70,19 @@ Alternatively, if you prefer `pip`:
 
 ## Usage
 
-### Jupyter Notebooks
-The `notebooks/` folder contains step-by-step development and exploration:
+### Notebooks Overview
+This project includes a set of structured Jupyter notebooks that walk through the full lifecycle of the anomaly detection pipeline:
 
-1. `01-data-exploration.ipynb` – Explore the dataset and visualize anomalies  
-2. `02-preprocessing.ipynb` – Perform ETL and cleaning steps  
-3. `03-ml-training.ipynb` – Train and evaluate the anomaly detection model  
+#### 01-data-exploration.ipynb
+Initial EDA, anomaly visualization, data distributions, missing values, and exploratory insights.
+
+#### 02-preprocessing.ipynb
+ETL pipeline construction, cleaning, scaling, handling skewed features, and feature engineering.
+
+#### 03-ml-training.ipynb
+Model training (Isolation Forest or others), tuning, evaluation metrics, ROC/AUC, and result interpretation.
+
+A detailed explanation for each notebook is provided inside the notebooks/README.md to help reviewers understand design decisions and methodology.  
 
 ### FastAPI
 Run the API locally:
