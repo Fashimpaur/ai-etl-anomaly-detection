@@ -52,9 +52,9 @@ This is appropriate when the data distribution is roughly bell-shaped (normal).
 
 **Formula:**
 
-\[
+$$
 z = \frac{x - \mu}{\sigma}
-\]
+$$
 
 Where:  
 - **x** = original value  
@@ -75,9 +75,9 @@ This preserves the shape of the distribution while normalizing scale.
 
 **Formula:**
 
-\[
+$$
 x_{\text{scaled}} = \frac{x - x_{\min}}{x_{\max} - x_{\min}}
-\]
+$$
 
 Where:  
 - **x** = original value  
