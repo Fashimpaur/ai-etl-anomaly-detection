@@ -1,9 +1,11 @@
 import pandas as pd
+from src.Preprocessors.synthetic_preprocessor import SyntheticPreprocessor as SyntheticProcessor
+from src.Preprocessors.kaggle_preprocessor import KagglePreprocessor as KagglePreprocessor
 
 class UnifiedPreprocessor:
-    def __init__(self, synthetic_processor, kaggle_processor):
-        self.synthetic_processor = synthetic_processor
-        self.kaggle_processor = kaggle_processor
+    def __init__(self, synthetic_preprocessor=None, kaggle_preprocessor=None):
+        self.synthetic_preprocessor = synthetic_preprocessor or SyntheticProcessor()
+        self.kaggle_preprocessor = kaggle_preprocessor or KagglePreprocessor()
 
     def preprocess(self,
                    synthetic_source: str,
@@ -11,10 +13,10 @@ class UnifiedPreprocessor:
                    shuffle: bool = True) -> pd.DataFrame:
 
         print("🚀 Running Synthetic Preprocessor...")
-        syn = self.synthetic_processor.preprocess(synthetic_source)
+        syn = self.synthetic_preprocessor.preprocess(synthetic_source)
 
         print("🚀 Running Kaggle Preprocessor...")
-        kaggle = self.kaggle_processor.preprocess(kaggle_source)
+        kaggle = self.kaggle_preprocessor.preprocess(kaggle_source)
 
         # ---------------------------------------------------------
         # ALIGN COLUMNS
